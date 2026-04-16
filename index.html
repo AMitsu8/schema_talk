@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>スキーマ体感ワークショップ | 1枚LP資料</title>
+  <meta name="description" content="今井むつみ先生の著書をもとにした、スキーマ体感ワークショップの概要資料。スマホで見やすい1枚LPです。">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <style>
+    :root {
+      --bg: #fafafa;
+      --surface: #ffffff;
+      --surface-soft: #f5f8ff;
+      --surface-green: #f3fbf6;
+      --text: #212121;
+      --muted: #5f6368;
+      --line: #dfe3eb;
+      --blue: #4285f4;
+      --blue-deep: #2b66c8;
+      --green: #34a853;
+      --green-deep: #20843e;
+      --shadow: 0 14px 34px rgba(33, 33, 33, 0.08);
+      --shadow-soft: 0 8px 20px rgba(33, 33, 33, 0.06);
+      --radius-xl: 28px;
+      --radius-lg: 22px;
+      --radius-md: 18px;
+      --radius-sm: 14px;
+      --max: 1080px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Roboto, "Noto Sans JP", "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(66, 133, 244, 0.10), transparent 30%),
+        radial-gradient(circle at top right, rgba(52, 168, 83, 0.10), transparent 28%),
+        linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+      line-height: 1.75;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(66, 133, 244, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(66, 133, 244, 0.03) 1px, transparent 1px);
+      background-size: 24px 24px;
+      opacity: 0.55;
+    }
+
+    main {
+      position: relative;
+      width: min(calc(100% - 24px), var(--max));
+      margin: 0 auto;
+      padding: 16px 0 72px;
+    }
+
+    .section,
+    .hero {
+      position: relative;
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(8px);
+      overflow: hidden;
+    }
+
+    .hero {
+      display: grid;
+      gap: 20px;
+      padding: 22px;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -80px -120px auto;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(66, 133, 244, 0.10), rgba(66, 133, 244, 0.01) 70%);
+      pointer-events: none;
+    }
+
+    .eyebrow,
+    .mini-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      min-height: 34px;
+      padding: 0 14px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow {
+      color: var(--blue-deep);
+      background: rgba(66, 133, 244, 0.10);
+    }
+
+    .mini-label {
+      color: var(--green-deep);
+      background: rgba(52, 168, 83, 0.10);
+      margin-bottom: 10px;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin: 0;
+    }
+
+    h1 {
+      margin-top: 14px;
+      font-size: clamp(2rem, 8vw, 3.4rem);
+      line-height: 1.18;
+      letter-spacing: -0.02em;
+    }
+
+    h2 {
+      font-size: clamp(1.42rem, 4.8vw, 2rem);
+      line-height: 1.28;
+      letter-spacing: -0.01em;
+    }
+
+    h3 {
+      font-size: 1.06rem;
+      line-height: 1.4;
+    }
+
+    .lead {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .hero-grid,
+    .grid-2,
+    .grid-3,
+    .quick-facts,
+    .rule-list,
+    .step-list,
+    .compare-grid,
+    .summary-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .stack {
+      display: grid;
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .hero-grid {
+      align-items: start;
+      margin-top: 18px;
+    }
+
+    .fact,
+    .card,
+    .step,
+    .rule,
+    .compare-card,
+    .summary-item,
+    .quote,
+    .intro-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .fact,
+    .card,
+    .compare-card,
+    .summary-item,
+    .intro-card {
+      padding: 16px;
+    }
+
+    .fact strong,
+    .card strong,
+    .compare-card strong,
+    .summary-item strong,
+    .rule strong,
+    .step strong,
+    .intro-card strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 0.98rem;
+    }
+
+    .fact small,
+    .card small,
+    .compare-card small,
+    .summary-item small {
+      color: var(--muted);
+    }
+
+    .fact {
+      background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+    }
+
+    .fact.highlight {
+      border-color: rgba(66, 133, 244, 0.24);
+      background: linear-gradient(180deg, rgba(66, 133, 244, 0.08), rgba(255, 255, 255, 0.96));
+    }
+
+    .section {
+      padding: 22px 18px;
+    }
+
+    .section-head {
+      display: grid;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .section-lead {
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .illustration-card {
+      position: relative;
+      padding: 18px;
+      border-radius: var(--radius-xl);
+      background: linear-gradient(180deg, #f6f9ff 0%, #eef4ff 100%);
+      border: 1px solid rgba(66, 133, 244, 0.16);
+      min-height: 280px;
+      overflow: hidden;
+    }
+
+    .illus-caption {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+      padding: 14px;
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid rgba(66, 133, 244, 0.12);
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .intro-card {
+      background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+    }
+
+    .intro-question {
+      margin-top: 12px;
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      background: #eef4ff;
+      color: var(--blue-deep);
+      font-weight: 700;
+    }
+
+    .quote {
+      padding: 18px;
+      background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+      border-left: 5px solid var(--blue);
+      color: var(--muted);
+    }
+
+    .rule-list,
+    .step-list {
+      counter-reset: flow;
+    }
+
+    .rule,
+    .step {
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      gap: 14px;
+      align-items: start;
+      padding: 16px;
+    }
+
+    .rule-badge,
+    .step-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 18px;
+      font-weight: 800;
+      font-size: 1rem;
+      color: #ffffff;
+      background: linear-gradient(135deg, var(--blue), var(--blue-deep));
+      box-shadow: 0 10px 20px rgba(66, 133, 244, 0.22);
+    }
+
+    .step-badge.green {
+      background: linear-gradient(135deg, var(--green), var(--green-deep));
+      box-shadow: 0 10px 20px rgba(52, 168, 83, 0.18);
+    }
+
+    .compare-card {
+      background: linear-gradient(180deg, #ffffff 0%, #fbfcff 100%);
+    }
+
+    .compare-label {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 0 10px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .compare-label.talker {
+      color: var(--blue-deep);
+      background: rgba(66, 133, 244, 0.12);
+    }
+
+    .compare-label.listener {
+      color: var(--green-deep);
+      background: rgba(52, 168, 83, 0.12);
+    }
+
+    .compare-arrow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--blue);
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+
+    .summary-item {
+      background: linear-gradient(180deg, #ffffff 0%, #f7fff9 100%);
+    }
+
+    .footer-note {
+      margin-top: 18px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .legend span {
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: #f1f3f4;
+      color: var(--muted);
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+
+    @media (min-width: 760px) {
+      main {
+        width: min(calc(100% - 40px), var(--max));
+        padding-top: 24px;
+      }
+
+      .hero {
+        padding: 28px;
+      }
+
+      .section {
+        padding: 28px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1.1fr 0.9fr;
+      }
+
+      .quick-facts {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .step-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .compare-grid {
+        grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+        align-items: center;
+      }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .hero,
+      .section {
+        animation: rise 0.65s ease both;
+      }
+    }
+
+    @keyframes rise {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="eyebrow">Schema Workshop / Mobile LP</div>
+      <div class="hero-grid">
+        <div>
+          <h1 id="hero-title">スキーマ体感<br>ワークショップ</h1>
+          <p class="lead">
+            今井むつみ先生の著書
+            『「何回説明しても伝わらない」はなぜ起こるのか？』
+            をもとにした、当日用の概要資料です。事前にざっと眺めるだけで全体像がつかめて、
+            当日は見ながら聞くと理解が深まるように、要点だけを1枚に整理しています。
+          </p>
+
+          <div class="quick-facts stack">
+            <article class="fact highlight">
+              <strong>この会の目的</strong>
+              <small>「伝えたつもり」と「伝わった内容」のズレを、体験で実感すること。</small>
+            </article>
+            <article class="fact">
+              <strong>扱うテーマ</strong>
+              <small>人それぞれが持つ考え方の枠組み、つまりスキーマの違い。</small>
+            </article>
+            <article class="fact">
+              <strong>当日の形式</strong>
+              <small>導入の問い → ペアワーク → 振り返り → 次回予告の流れ。</small>
+            </article>
+          </div>
+        </div>
+
+        <aside class="illustration-card" aria-labelledby="illus-title">
+          <h2 id="illus-title" class="sr-only">スキーマのズレを表すイラスト</h2>
+          <svg viewBox="0 0 360 280" width="100%" height="100%" aria-hidden="true">
+            <defs>
+              <linearGradient id="bubbleBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#4285F4" stop-opacity="0.16"/>
+                <stop offset="100%" stop-color="#4285F4" stop-opacity="0.06"/>
+              </linearGradient>
+              <linearGradient id="bubbleGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#34A853" stop-opacity="0.16"/>
+                <stop offset="100%" stop-color="#34A853" stop-opacity="0.06"/>
+              </linearGradient>
+            </defs>
+
+            <rect x="24" y="36" width="132" height="76" rx="24" fill="url(#bubbleBlue)" stroke="#A9C7FB"/>
+            <rect x="204" y="54" width="132" height="76" rx="24" fill="url(#bubbleGreen)" stroke="#B8E3C5"/>
+
+            <circle cx="92" cy="186" r="34" fill="#DCE9FF"/>
+            <rect x="56" y="222" width="72" height="22" rx="11" fill="#C3DAFF"/>
+            <circle cx="268" cy="186" r="34" fill="#D7F0DE"/>
+            <rect x="232" y="222" width="72" height="22" rx="11" fill="#BCE4C8"/>
+
+            <path d="M110 112 C124 138, 134 146, 146 150" fill="none" stroke="#4285F4" stroke-width="4" stroke-linecap="round"/>
+            <path d="M250 130 C234 150, 226 156, 212 160" fill="none" stroke="#34A853" stroke-width="4" stroke-linecap="round"/>
+
+            <rect x="52" y="58" width="74" height="12" rx="6" fill="#7FB0FF"/>
+            <rect x="52" y="80" width="54" height="12" rx="6" fill="#B4D1FF"/>
+            <rect x="224" y="76" width="78" height="12" rx="6" fill="#76C38A"/>
+            <rect x="224" y="98" width="52" height="12" rx="6" fill="#B1E0BF"/>
+
+            <circle cx="180" cy="154" r="22" fill="#FFFFFF" stroke="#D4DCE8" stroke-width="2"/>
+            <path d="M168 154 H192" stroke="#4285F4" stroke-width="4" stroke-linecap="round"/>
+            <path d="M180 142 V166" stroke="#34A853" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+          <div class="illus-caption">
+            同じ言葉でも、話し手と聞き手が持つ前提が違うと、
+            行間の埋め方が変わって受け取り方もズレます。
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <div class="stack">
+      <section class="section" aria-labelledby="overview-title">
+        <div class="section-head">
+          <div class="mini-label">Overview</div>
+          <h2 id="overview-title">まずここだけ見れば、今日の全体像がわかる</h2>
+          <p class="section-lead">
+            このワークショップは、話し方の上手下手を競う場ではなく、
+            「自分と相手は思っている以上に違う」という前提に気づくための体験の場です。
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <strong>1. 同じ問いでも答えが違う</strong>
+            <small>導入の問いを共有するだけで、人ごとの違いが見えてきます。</small>
+          </article>
+          <article class="card">
+            <strong>2. 伝えた内容と、伝わった内容はズレる</strong>
+            <small>短時間で話すと、前提の違いがよりはっきり浮かび上がります。</small>
+          </article>
+          <article class="card">
+            <strong>3. そのズレを修正する体験をする</strong>
+            <small>「つまりあなたって〇〇なんですね」に対して修正が入るのがポイントです。</small>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="intro-title">
+        <div class="section-head">
+          <div class="mini-label">Intro</div>
+          <h2 id="intro-title">導入で伝えること</h2>
+          <p class="section-lead">
+            冒頭は、著書をもとに構成していることと、今日の目的が
+            「ズレを体感すること」であると短く共有すれば十分です。
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <article class="intro-card">
+            <strong>最初の説明</strong>
+            <p>
+              今日のワークショップは、今井むつみ先生の著書
+              『「何回説明しても伝わらない」はなぜ起こるのか？』をもとに構成しています。
+              この時間では、相手に伝えたつもりでも、実は思ったほど伝わっていない、
+              ということを体験してもらいます。
+            </p>
+          </article>
+
+          <article class="intro-card">
+            <strong>導入の問い</strong>
+            <div class="intro-question">「あなたの最高の贅沢ってなんですか？」</div>
+            <p style="margin-top: 12px;">
+              少しだけ自分の中で考える → 正面の人と1分ほど共有。
+              これだけで、同じ問いでも解釈が人によってかなり違うことが見えてきます。
+            </p>
+          </article>
+        </div>
+
+        <div class="quote" style="margin-top: 14px;">
+          今日のキーワードは「スキーマ」。
+          ここでは難しく説明しすぎず、
+          「人それぞれの経験からできた考え方の枠組み」くらいの平易さで十分です。
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="rules-title">
+        <div class="section-head">
+          <div class="mini-label">Rules</div>
+          <h2 id="rules-title">ペアワークのルール</h2>
+          <p class="section-lead">
+            ルール説明を先にまとめて伝え、そのあとに「では最初のお題です」と入る流れにすると
+            全体が締まりやすくなります。
+          </p>
+        </div>
+
+        <div class="rule-list">
+          <article class="rule">
+            <div class="rule-badge">3分</div>
+            <div>
+              <strong>先攻が話す</strong>
+              <p>お題に沿って、自分の考えや内容を3分で伝えます。全部を完璧に話そうとしなくて大丈夫です。</p>
+            </div>
+          </article>
+          <article class="rule">
+            <div class="rule-badge">聞く</div>
+            <div>
+              <strong>後攻はメモなしで理解する</strong>
+              <p>メモは取らずに聞きます。ただし、理解するための質問はその場でして構いません。</p>
+            </div>
+          </article>
+          <article class="rule">
+            <div class="rule-badge">1分</div>
+            <div>
+              <strong>理解した内容を返す</strong>
+              <p>後攻が「私はこう理解しました」という形で1分で返します。</p>
+            </div>
+          </article>
+          <article class="rule">
+            <div class="rule-badge">2分</div>
+            <div>
+              <strong>お互いにフィードバック</strong>
+              <p>どこが伝わったか、どこがズレたか、何が分かりやすかったかを言葉にします。</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="legend">
+          <span>先攻と後攻は交代する</span>
+          <span>お題は都度変わる</span>
+          <span>全部で10問前後を想定</span>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="flow-title">
+        <div class="section-head">
+          <div class="mini-label">Flow</div>
+          <h2 id="flow-title">当日の進行イメージ</h2>
+          <p class="section-lead">
+            スマホで見ながらでも追いやすいように、流れを5つに分けて整理しています。
+          </p>
+        </div>
+
+        <div class="step-list">
+          <article class="step">
+            <div class="step-badge">1</div>
+            <div>
+              <strong>導入</strong>
+              <p>著書をもとにした会であること、今日の目的が「伝わらなさを体感すること」であると共有します。</p>
+            </div>
+          </article>
+          <article class="step">
+            <div class="step-badge green">2</div>
+            <div>
+              <strong>導入の問い</strong>
+              <p>「あなたの最高の贅沢ってなんですか？」を短く考え、正面の人と共有します。</p>
+            </div>
+          </article>
+          <article class="step">
+            <div class="step-badge">3</div>
+            <div>
+              <strong>ルール説明</strong>
+              <p>3分で話す、1分で返す、2分でフィードバック、役割交代、ペア替えまでを一気に説明します。</p>
+            </div>
+          </article>
+          <article class="step">
+            <div class="step-badge green">4</div>
+            <div>
+              <strong>最初のお題で開始</strong>
+              <p>ルール説明後に「では最初のお題です」と始めると、参加者が動きやすくなります。</p>
+            </div>
+          </article>
+          <article class="step">
+            <div class="step-badge">5</div>
+            <div>
+              <strong>振り返りと次回予告</strong>
+              <p>ズレは自然に起こること、そして次回は「伝わりやすくする構造」を扱うことを伝えます。</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="schema-title">
+        <div class="section-head">
+          <div class="mini-label">Schema Gap</div>
+          <h2 id="schema-title">なぜズレるのか</h2>
+          <p class="section-lead">
+            この1枚で一番伝えたいのはここです。言葉だけで意味をそのまま渡せるわけではなく、
+            聞き手は自分の前提で行間を埋めて理解します。
+          </p>
+        </div>
+
+        <div class="compare-grid">
+          <article class="compare-card">
+            <div class="compare-label talker">話し手</div>
+            <strong>自分のスキーマで話している</strong>
+            <p>
+              これくらいなら伝わるだろう、という前提で大事な背景を省略しがちです。
+            </p>
+          </article>
+
+          <div class="compare-arrow" aria-hidden="true">→</div>
+
+          <article class="compare-card">
+            <div class="compare-label listener">聞き手</div>
+            <strong>自分のスキーマで受け取る</strong>
+            <p>
+              同じ言葉でも、経験や役割が違えば、補われる意味も変わってきます。
+            </p>
+          </article>
+        </div>
+
+        <div class="quote" style="margin-top: 14px;">
+          だからこそ、返してもらう言葉が
+          「つまりあなたって〇〇な人なんですね」
+          になると、本人の中で
+          「いや、ちょっと違くて…」
+          が起きやすくなり、ズレが可視化されます。
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="watch-title">
+        <div class="section-head">
+          <div class="mini-label">Watch Point</div>
+          <h2 id="watch-title">見ておきたい反応</h2>
+          <p class="section-lead">
+            参加者の言葉の内容だけでなく、「どこでズレたか」「どこで修正が入ったか」を見ると、
+            このワークショップの価値が伝わりやすくなります。
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="summary-item">
+            <strong>解釈のズレ</strong>
+            <p>同じテーマでも、相手は別の意味で受け取っていることがあります。</p>
+          </article>
+          <article class="summary-item">
+            <strong>抽象化のズレ</strong>
+            <p>具体的な経験を聞いても、返すときに別の抽象度で要約されることがあります。</p>
+          </article>
+          <article class="summary-item">
+            <strong>本人の修正</strong>
+            <p>「違う」と言えること自体が、相互理解に向かう最初の一歩になります。</p>
+          </article>
+        </div>
+      </section>
+
+    </div>
+  </main>
+</body>
+</html>
